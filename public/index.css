@@ -1,0 +1,233 @@
+:root {
+  --base-font-family: 'Fira Sans', sans-serif, Helvetica;
+
+  --dark-color: #64243f;
+  --light-color: #f7e9dc;
+  --mid-color: #e3e8f8;
+
+  --shadow-color: #00000029;
+  --supplylist-last-back-color: #dadce073;
+  --supplylist-back-color: #dadce0;
+
+  --main-header-text-color: var(--dark-color);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: var(--base-font-family);
+}
+
+body {
+  padding: 0 calc(100vw / 24);
+  min-height: 100vh;
+  background: linear-gradient(#873cff66, #873cff00 80%),
+    linear-gradient(-45deg, #789bffe6 25%, #ffa041e6 75%)  center / cover no-repeat;
+  transition: .5s;
+}
+
+header#main-header {
+  width: 100%;
+  font-weight: 600;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4vh 0;
+  font-size: clamp(1rem, 2.7vw, 3.125rem);
+  color: var(--main-header-text-color);
+}
+
+main {
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 4vh;
+  margin-bottom: 4vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  row-gap: 4vh;
+  column-gap: calc(8% / 3);
+}
+
+.sb-supplylist {
+  width: 46%;
+  box-sizing: border-box;
+  border-radius: 0.4vw;
+  border: 1px solid var(--dark-color);
+  padding: 1vw 1.2vw;
+  box-shadow: 2px 2px 4px var(--shadow-color);
+  background-color: var(--supplylist-back-color);
+}
+
+.sb-supplylist:last-child {
+  background-color: var(--supplylist-last-back-color);
+  transition: background-color 1s ease;
+}
+
+.sb-supplylist:last-child:hover {
+  background-color: var(--supplylist-back-color);
+}
+
+#sb-supplylist-add-supplylist {
+  border: none;
+  background: none;
+  margin-bottom: 0;
+  font-weight: 400;
+  color: var(--dark-color);
+  font-size: clamp(0.75rem, 2vw, 2rem);
+}
+
+#sb-supplylist-add-supplylist:hover {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sb-supplylist-heads {
+  overflow-wrap: anywhere;
+  font-size: clamp(0.6rem, 1vw, 1.2rem);
+  font-weight: 500;
+  margin: 2vw 0 1vw 0;
+  color: var(--dark-color);
+  display: flex;
+  width: 95%;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  gap: 1vw;
+  padding-left: 2vw;
+}
+
+.sb-supplylist-header {
+  font-size: clamp(0.75rem, 2vw, 2rem);
+  font-weight: 600;
+  color: var(--dark-color);
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5vw;
+}
+
+.sb-supplylist-add-supply {
+  border: none;
+  background: none;
+  font-size: clamp(0.7rem, 1.5vw, 1.5rem);
+  color: var(--dark-grey-color);
+  padding: 1vw;
+}
+
+.sb-supplylist-footer,
+.sb-supplylist > div:first-child {
+  text-align: center;
+  padding: 1vw;
+}
+
+.sb-supplylist-add-supply:hover {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sb-supplylist-supply-clickable:hover {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.sb-supplylist-supply {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1vw;
+  padding: 2vw;
+  margin-bottom: 1vw;
+  border-radius: 0.75vw;
+  box-shadow: 2px 2px 4px var(--shadow-color);
+  background-color: var(--light-color);
+  border: 2px solid var(--light-color);
+  transition: background-color 0.5s ease, border 0.5s ease;
+  overflow-wrap: anywhere;
+  font-size: clamp(0.7rem, 1.4vw, 1.5rem);
+}
+
+.sb-supplylist-supply:hover {
+  background-color: var(--mid-color);
+  border-color: var(--dark-color);
+}
+
+.sb-supplylist-supply-controls-button {
+  width: 2.5vw;
+  height: 2.5vw;
+  opacity: 0.6;
+  border: none;
+}
+
+.sb-supplylist-supply-data {
+  padding-left: 1vw;
+}
+
+.sb-supplylist-supply-data:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.sb-supplylist-supply-text {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.sb-supplylist-supply-count {
+  display: flex;
+  justify-content: center;
+  width: 18%;
+}
+
+.sb-supplylist-supply-price {
+  display: flex;
+  justify-content: center;
+  width: 18%;
+}
+
+.sb-supplylist-supply-total {
+  display: flex;
+  justify-content: center;
+  width: 18%;
+}
+
+.sb-supplylist-supply-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 6%;
+}
+
+.sb-supplylist-supply-controls-button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.del-button {
+  background: url(./content/del-button.svg) center / cover;
+}
+
+#add-supplylist-input,
+.sb-supply-field {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid var(--dark-color);
+  border-radius: 0.2vw;
+  box-shadow: 0 0 4px var(--shadow-color);
+  padding: 0.6vw;
+  font-size: clamp(0.7rem, 1.5vw, 1.5rem);
+  color: black;
+  opacity: 0.7;
+  outline: none;
+  display: none;
+}
+
+#add-supplylist-input:hover,
+#add-supplylist-input:focus,
+.sb-supply-field:hover,
+.sb-supply-field:focus {
+  opacity: 1;
+}
