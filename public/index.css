@@ -210,6 +210,10 @@ main {
   background: url(./content/del-button.svg) center / cover;
 }
 
+.del-list {
+  background: url(./content/del-list.svg) center / cover;
+}
+
 #add-supplylist-input,
 .sb-supply-field {
   box-sizing: border-box;
